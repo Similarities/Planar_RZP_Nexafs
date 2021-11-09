@@ -1,0 +1,2 @@
+# Planar_RZP_Nexafs
+Reference_Sample_measurement, automatic evaluation routine
