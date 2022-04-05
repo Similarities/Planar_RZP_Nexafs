@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# reference point list: method evaluates minimum in +/- range, the px-position (in x) of minimum is needed
-# umgeschrieben mit np.roll auf 1d arrays
+# reference point list: method evaluates minimum in +/- range, the initial px-position (in x) of minimum is needed
+# shift via np.roll auf 1d arrays
 # array_reference - 1d reference spectrum
 # reference point: initial guess minimum
 class PixelShift:
@@ -26,7 +26,7 @@ class PixelShift:
         return self.position_reference
 
     def evaluate_shift_for_input_array(self, spectrum):
-        #spectrum ist 1d spectrum -> for stacks: muss man dat hier in loop packen
+        # spectrum ist 1d spectrum
         self.array_in = spectrum
         # self.test_plot(self.array_reference, 1, "reference")
         min_position = self.minimum_analysis(self.array_in)
@@ -78,6 +78,3 @@ class PixelShift:
         plt.figure(figure_number)
         plt.plot(array, label=name)
         plt.title("px - shift -test plot")
-        # plt.ylim(0, np.amax(array))
-        # plt.xlim(self.reference_points[0] -20, self.reference_points[0] + 20)
-        # plt.legend()
