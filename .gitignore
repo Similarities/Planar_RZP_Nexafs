@@ -13,7 +13,7 @@
 /__pycache__
 *.logs
 *.env
-*.png
+#*.png
 #*.tiff
 #*.tif
 *.xml
