@@ -15,8 +15,8 @@
 *.logs
 *.env
 *.png
-*.tiff
-*.tif
+#*.tiff
+#*.tif
 *.xml
 *.pyc
 
